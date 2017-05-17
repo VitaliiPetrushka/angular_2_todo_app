@@ -1,0 +1,6 @@
+<div class="list-section" *ngIf="loading || tasks.length">
+  <ul>
+    <task *ngFor="let task of tasks" [task]="task" (ondelete)="onTaskDelete($event)"></task>
+    <img *ngIf="loading" src="app/shared/loader.svg" alt="">
+  </ul>
+</div>

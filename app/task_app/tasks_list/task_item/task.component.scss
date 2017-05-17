@@ -1,0 +1,38 @@
+.list-section ul li{
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 10px;
+  &.done {
+    text-decoration: line-through;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+  &:hover {
+    background-color: #eee;
+    button {
+      visibility: visible;
+    }
+  }
+  button {
+    position: absolute;
+    visibility: hidden;
+    top: 50%;
+    padding: 5px 7px;
+    text-align: center;
+    right: 5px;
+    transform: translateY(-52%);
+    background-color: tomato;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+    &:active {
+      outline: none;
+    }
+    &:hover {
+      background-color: darken(tomato, 5%);
+    }
+  }
+}

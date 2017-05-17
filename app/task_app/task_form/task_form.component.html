@@ -1,0 +1,14 @@
+<div class="control-section">
+  <form [formGroup]="taskForm" (ngSubmit)="formSubmit($event)">
+    <div class="input-group">
+      <input type="text"
+             (keyup.enter)="formSubmit($event)"
+             [formControl]="taskName"
+             [ngClass]="{'has-error':taskName.invalid && form_submitted}">
+      <button type="submit">Add</button>
+    </div>
+    <div *ngIf="taskName.hasError('required') && form_submitted" class="error-section">
+      <div>This field is required!</div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,5 @@
+<li [ngClass]="{done: task.done}">
+  <input type="checkbox" [checked]="task.done" (change)="toggle_task_completed()">
+  {{task.name}}
+  <button (click)="delete_task()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+</li>
